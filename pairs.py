@@ -3,13 +3,12 @@ summ = 10
 
 def find_pair(cur, *list_elem):
     for ele in list_elem:
-        print(ele)
         if ele + cur == summ:
             return (ele, cur)
             print(ele, cur)
 
 
-def pair(*list_elem):
+def pair(list_elem):
     for elem in list_elem:
         print(find_pair(elem, *list_elem))
 
