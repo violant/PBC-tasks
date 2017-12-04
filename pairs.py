@@ -4,7 +4,7 @@ summ = 10
 def find_pair(cur, *list_elem):
     for ele in list_elem:
         if ele + cur == summ:
-            return (ele, cur)
+            return ele, cur
 
 
 def pair(list_elem):
