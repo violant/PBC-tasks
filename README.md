@@ -7,7 +7,7 @@
 
 **Files:**
 
-- `fibonachi.py ` To get fibonacci sequence run it with parameter of sequence size. Return list of values. Return empty list if parameter less or equal 0. Cast to int if paramenter is not int.
+- `fibonachi.py ` To get fibonacci sequence run it with parameter of sequence size. Return list of values. Return empty list if parameter less or equal 0. Return empty set if paramenter is not int.
 
 - `pairs.py` Return set of unique pairs with specified sum. Return empty set if no any pairs with specified sum
 

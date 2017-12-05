@@ -13,5 +13,5 @@ def pair(list_elem):
     return pair_res
 
 
-list_ele = [7, 4, 5, 6, 4, 9, 3, 1]
-print(pair(list_ele))
+#list_ele = [7, 3]
+#print(pair(list_ele))

@@ -2,6 +2,8 @@ def fib(n):
     s0 = 0
     s1 = 1
     fibo = []
+    if type(n) is not int:
+        return fibo
     if n >= 1:
         fibo.append(s0)
     if n >= 2:
@@ -15,5 +17,5 @@ def fib(n):
     return fibo
 
 
-n = 7
-print(fib(n))
+#n = 10.1
+#print(fib(n))
