@@ -7,17 +7,17 @@
 
 **Files:**
 
-- `fibonachi.py ` To get fibonacci sequence run it with parameter of sequence size. Return list of values. 
+- `fibonachi.py ` To get fibonacci sequence run it with parameter of sequence size. Return list of values. Return empty list if parameter less or equal 0. Cast to int if paramenter is not int.
 
-- `pairs.py` Return ALL pairs with specified sum. Return set of pairs.
+- `pairs.py` Return set of unique pairs with specified sum. Return empty set if no any pairs with specified sum
 
-- `vargantfile` config file for Vagrant. 
+- `vargantfile` config file for Vagrant with specified IP 192.168.33.10 and VM name violant. 
 
 To run VM: 
 
-- install vagrant 
+- install _Vagrant_ 
 - copy `vagrantfile` to VM directory
-- run `vagrant up `to start vm in Virtual box with IP 192.168.33.10 and VM name violant
+- run `vagrant up `to start vm in Virtual box with IP _192.168.33.10_ and VM name _violant_
 
 **Lesson 2**
 
