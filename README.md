@@ -27,5 +27,10 @@ To run VM:
 
 Added provision section to `vargantfile`
 
+To prepare virtual env execute next commands:
+- python -m venv venv
+- source venv/bin/activate
+- pip install -r `requirements.txt`
+
 
 
