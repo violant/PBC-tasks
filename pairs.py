@@ -4,6 +4,7 @@ summ = 10
 def find_pair(cur, *list_elem):
     for ele in list_elem:
         if ele + cur == summ:
+            tup=(ele, cur)
             return min(ele, cur), max(ele, cur)
 
 
