@@ -21,9 +21,11 @@ To run VM:
 
 **Lesson 2**
 
-`test_fibonachi.py` unit test file for `fibonachi.py`
+- `test_fibonachi.py` unit test file for `fibonachi.py` for pytest
 
-`test_pairs.py` unit test file for `pairs.py`
+- `test_pairs.py` unit test file for `pairs.py` for pytest
+
+Added provision section to `vargantfile`
 
 
 
