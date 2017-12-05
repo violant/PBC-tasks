@@ -1,19 +1,17 @@
 summ = 10
 
 
-def find_pair(cur, *list_elem):
-    for ele in list_elem:
-        if ele + cur == summ:
-            return min(ele, cur), max(ele, cur)
-
-
 def pair(list_elem):
     pair_res = set()
-    for elem in list_elem:
-        if find_pair(elem, *list_elem) is not None:
-            pair_res.add(find_pair(elem, *list_elem))
+    i=0
+    j=0
+    for i in range(list_elem.__len__()):
+        for j in range(list_elem.__len__()):
+            if (list_elem[i] + list_elem[j] == summ) and (i != j):
+                pair_found = min(list_elem[i], list_elem[j]), max(list_elem[i], list_elem[j])
+                pair_res.add(pair_found)
     return pair_res
 
 
-list_ele = [17, 4, 5, 6, 5, 4, 9]
+list_ele = [7, 4, 5, 6, 4, 9, 3, 1]
 print(pair(list_ele))
