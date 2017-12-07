@@ -1,3 +1,7 @@
+# ./app.py
+import argparse
+
+
 def fib(n):
     s0 = 0
     s1 = 1
@@ -17,5 +21,11 @@ def fib(n):
     return fibo
 
 
-#n = 10.1
-#print(fib(n))
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Fibonacci sequence")
+    group = parser.add_argument_group("Parameters")
+    group.add_argument("--number", "-n", action='store', help="Number of Fibonacci sequence", type=int, required=True)
+    args = parser.parse_args()
+    str_fib = str(fib(args.number)).strip('[]')
+    print (str_fib)
+
