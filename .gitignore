@@ -2,3 +2,5 @@
 .idea
 .vagrant
 /.vagrant
+.git
+/.git
