@@ -17,14 +17,10 @@ def pair(*list_elem):
     return pair_res
 
 
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser(description="This apps prints a number to the output")
-#     group = parser.add_argument_group("Parameters")
-#     group.add_argument("--list", "-l", action='store', nargs='+',
-#     help="List of int with space delimiter. For example 1 2 3 34 678 ", type=int, required=True)
-#     args = parser.parse_args()
-#     print (args)
-#     print (pair(args))
-
-
-print(pair(1, 2, 3, 4, 5, 6, 7, 8))
+if __name__ == '__main__':
+     parser = argparse.ArgumentParser(description="This app print pairs with sum 10 from list")
+     group = parser.add_argument_group("Parameters")
+     group.add_argument("--list", "-l", action='store', nargs='+',
+     help="List of int with space delimiter. For example 1 2 3 34 678 ", type=int, required=True)
+     args = parser.parse_args()
+     print (pair(*args.list))
