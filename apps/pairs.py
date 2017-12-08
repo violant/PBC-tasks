@@ -7,7 +7,7 @@ summ = 10
 
 @decorator
 def pair(*list_elem):
-    #     print(list_elem)
+    print(list_elem)
     pair_res = set()
     i = 0
     j = 0

@@ -1,7 +1,9 @@
 # ./app.py
 import argparse
+from decorator import decorator
 
 
+@decorator
 def fib(n):
     s0 = 0
     s1 = 1
@@ -28,4 +30,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
     str_fib = str(fib(args.number)).strip('[]')
     print (str_fib)
-
