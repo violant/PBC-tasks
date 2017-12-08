@@ -1,35 +1,23 @@
-from pairs import pair
+import pytest
+from apps.pairs import pair
 
-#test_data
-arr1 = [4, 5, 6, 7, 3]
-arr2 = [17, 4, 5, 6, 5]
-arr3 = [1, 2, 3, 4, 5]
-arr4 = []
-arr5 = [765]
-res1 = set([(3, 7), (4, 6)])
-res2 = set([(4, 6), (5, 5)])
-empty_set = set([])
-res6 = set([(3, 7), (4, 6), (5, 5)])
+_empty_set = set([])
 
 
-#list with one 5
-def test_1():
-    assert pair(arr1) == res1
+@pytest.mark.positive
+@pytest.mark.parametrize("test_input,expected", [
+    ((4, 5, 6, 7, 3), set([(3, 7), (4, 6)])),
+    ((17, 4, 5, 6, 5, 5), set([(4, 6), (5, 5)])),
+    ([1, 2, 3, 4, 5], _empty_set)
+])
+def test1(test_input, expected):
+    assert expected == pair(*test_input)
 
 
-#list with two 5
-def test_2():
-    assert pair(arr2) == res2
-
-#list without pairs
-def test_3():
-    assert pair(arr3) == empty_set
-
-#empty list
-def test_4():
-    assert pair(arr4) == empty_set
-
-#list with one value
-def test_5():
-    assert pair(arr5) == empty_set
-
+@pytest.mark.negative
+@pytest.mark.parametrize("test_input,expected", [
+    ([], _empty_set),
+    ([765], _empty_set)
+])
+def test2(test_input, expected):
+    assert expected == pair(test_input)
