@@ -1,11 +1,13 @@
 # args.py
 import argparse
-
+from decorator import decorator
 
 summ = 10
 
 
+@decorator
 def pair(*list_elem):
+    #     print(list_elem)
     pair_res = set()
     i = 0
     j = 0
@@ -18,9 +20,9 @@ def pair(*list_elem):
 
 
 if __name__ == '__main__':
-     parser = argparse.ArgumentParser(description="This app print pairs with sum 10 from list")
-     group = parser.add_argument_group("Parameters")
-     group.add_argument("--list", "-l", action='store', nargs='+',
-     help="List of int with space delimiter. For example 1 2 3 34 678 ", type=int, required=True)
-     args = parser.parse_args()
-     print (pair(*args.list))
+    parser = argparse.ArgumentParser(description="This app print pairs with sum 10 from list")
+    group = parser.add_argument_group("Parameters")
+    group.add_argument("--list", "-l", action='store', nargs='+',
+                       help="List of int with space delimiter. For example 1 2 3 34 678 ", type=int, required=True)
+    args = parser.parse_args()
+    print (pair(*args.list))
