@@ -17,7 +17,7 @@ To run VM:
 
 - install _Vagrant_ 
 - copy `vagrantfile` to VM directory
-- run `vagrant up `to start vm in Virtual box with IP _192.168.33.10_ and VM name _violant_
+- run `vagrant up --provision`to start vm in Virtual box with IP _192.168.33.10_ and VM name _violant_
 
 **Lesson 2**
 
