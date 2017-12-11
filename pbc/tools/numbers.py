@@ -1,6 +1,6 @@
 # args.py
 import argparse
-from decorator import decorator
+from pbc.func_decorator import decorator
 
 summ = 10
 

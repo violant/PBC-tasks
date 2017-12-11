@@ -1,7 +1,6 @@
-# ./app.py
 import argparse
-from apps.fibonachi import fib
-from apps.pairs import pair
+from pbc.tools.fibonacci import fib
+from pbc.tools.numbers import pair
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Fibonacci sequence or print pairs with sum 10 from list")
@@ -18,5 +17,3 @@ if __name__ == '__main__':
 
     elif args.pairs:
         print (pair(*args.list))
-
-

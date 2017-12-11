@@ -1,5 +1,5 @@
 import pytest
-from apps.pairs import pair
+from pbc.tools.numbers import pair
 
 _empty_set = set([])
 

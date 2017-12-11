@@ -1,6 +1,6 @@
 # ./app.py
 import argparse
-from decorator import decorator
+from pbc.func_decorator import decorator
 
 
 @decorator
