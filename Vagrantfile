@@ -69,6 +69,9 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+
+  config.vm.define "violantman"
+
   config.vm.provision "shell", inline: <<-SHELL
      apt-get -y -q update
      apt-get -y -q upgrade
