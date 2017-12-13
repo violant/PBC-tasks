@@ -1,15 +1,16 @@
 from pbc.sg.sg import StartGrid, Grid
-import selenium
+from selenium import webdriver
 
 
 def test_sg_sm(ssh_client):
     grid = StartGrid(Grid(ssh_client))
     grid.download()
+    grid.download_json()
     grid.start_hub()
     grid.add_node()
     res = ssh_client.execute('pgrep java')
     assert len(res) == 2
-    g
+    grid.clean()
 
 
 def test_sg_grid_firefox_icons(ssh_client):
@@ -24,3 +25,4 @@ def test_sg_grid_firefox_icons(ssh_client):
         "//div[@type='browsers' and @class='content_detail']//img[contains(@title,'firefox')]")
     assert 5, elem.count()
     driver.close()
+    grid.clean()

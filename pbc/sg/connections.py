@@ -1,5 +1,6 @@
 import paramiko
 import time
+import socket
 
 
 class SshClient:
@@ -9,7 +10,13 @@ class SshClient:
         self._password = password
         self.client = paramiko.SSHClient()
         self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy)
+        # try:
         self.client.connect(self._host, username=self._user, password=self._password)
+        # except paramiko.SshException, exception:
+        #     raise exception
+        # except paramiko.AuthenticationException, exception:
+        #     message = "SshClient.__init__ failed to authenticate with private key" + exception
+        #     raise paramiko.AuthenticationException(message)
 
     def execute(self, command):
         if self.client:
@@ -27,7 +34,7 @@ class SshClient:
                 return stderr.read().splitlines()
 
         else:
-            print("Connection not opened.")
+            raise Exception("Can't execute command cause no SSH Connection")
 
     def close(self):
         if self.client:
